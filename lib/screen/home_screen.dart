@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Air Clean'),
       ),
+      backgroundColor: const Color.fromARGB(255, 255, 253, 230),
     );
   }
 }
