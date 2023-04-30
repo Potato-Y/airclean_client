@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import '../model/state/server_info.dart';
-import '../util/api_service.dart';
+import '../util/iot_api_service.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -72,7 +72,7 @@ class LoginScreen extends StatelessWidget {
                   onPressed: () async {
                     try {
                       Map<String, dynamic> response =
-                          await ApiService.getAuthCheck(pwController.text);
+                          await IoTApiService.getAuthCheck(pwController.text);
                       if (response['result'] == true && context.mounted) {
                         // 로그인 성공 시 pw 저장
                         context.read<ServerInfo>().setPwd = pwController.text;
