@@ -29,4 +29,17 @@ class ApiService {
 
     throw Error();
   }
+
+  static Future<Map<String, dynamic>> getDeviceState(String pw) async {
+    final url = Uri.parse('$baseUrl/now_device_state');
+    final response = await http.post(url,
+        body: json.encode({'pw': pw}),
+        headers: {'Content-Type': 'application/json'});
+
+    if (response.statusCode == 200) {
+      return jsonDecode(response.body);
+    }
+
+    throw Error();
+  }
 }
