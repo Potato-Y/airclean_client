@@ -52,6 +52,7 @@ class App extends StatelessWidget {
           // brightness: Brightness.dark,
         ),
       ),
+      debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),

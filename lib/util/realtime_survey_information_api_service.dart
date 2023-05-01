@@ -11,7 +11,7 @@ class RealtimeSurveyInformationApiService {
   static Future<Map<String, dynamic>> getRegion1DepthName(
       String address) async {
     final url = Uri.parse(
-        '$baseUrl?serviceKey=$key&returnType=json&numOfRows=1&sidoName=$address');
+        '$baseUrl?serviceKey=$key&returnType=json&numOfRows=1&sidoName=$address&ver=1.0');
     final response = await http.get(url);
     if (response.statusCode == 200) {
       // debugPrint(response.body);

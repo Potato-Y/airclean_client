@@ -42,4 +42,22 @@ class IoTApiService {
 
     throw Error();
   }
+
+  static Future<Map<String, dynamic>> setModeChange(
+      String pw, int mode, int humidityMode) async {
+    final url = Uri.parse('$baseUrl/mode_change');
+    final response = await http.post(url,
+        body: json.encode({
+          'pw': pw,
+          'mode': mode,
+          'humidityMode': humidityMode,
+        }),
+        headers: {'Content-Type': 'application/json'});
+
+    if (response.statusCode == 200) {
+      return jsonDecode(response.body);
+    }
+
+    throw Error();
+  }
 }
