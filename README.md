@@ -16,7 +16,7 @@
 프로젝트의 전체 설명은 [Backend](https://github.com/Potato-Y/airclean_server) 문서를 확인해 주세요.
 
 ## 사용 기술 스택
-<img src="https://img.shields.io/badge/flutter-02569B?style=for-the-badge&logo=springboot&logoColor=white">
+<img src="https://img.shields.io/badge/flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white">
 
 # 주요 기능
 - 공기청정기의 작동 상태를 확인
